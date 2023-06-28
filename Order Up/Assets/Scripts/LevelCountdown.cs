@@ -21,6 +21,10 @@ public class LevelCountdown : MonoBehaviour
 
     public TeleportationProvider teleportationProvider;
 
+    public AudioSource countdownAudioSource;
+
+    public AudioSource countdownFinishedAudioSource;
+
     private void Start()
     {
         countdown(timeLength);
@@ -43,11 +47,18 @@ public class LevelCountdown : MonoBehaviour
             if (counter > 0)
             {
                 text.text = $"{remainingDuration % 60}";
+                if (counter <= 3)
+                {
+                    countdownAudioSource.Play();
+                }
                 remainingDuration--;
             }
             else
             {
                 text.text = "Go";
+                countdownFinishedAudioSource.Play();
+                dynamicMoveProvider.enabled = true;
+                teleportationProvider.enabled = true;
                 remainingDuration--;
             }
 
@@ -60,7 +71,7 @@ public class LevelCountdown : MonoBehaviour
         Debug.Log("End of timer");
         text.gameObject.SetActive(false);
         levelTimer.startTimer();
-        dynamicMoveProvider.enabled = true;
-        teleportationProvider.enabled = true;
+        //dynamicMoveProvider.enabled = true;
+        //teleportationProvider.enabled = true;
     }
 }
