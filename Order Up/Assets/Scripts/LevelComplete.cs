@@ -13,6 +13,8 @@ public class LevelComplete : MonoBehaviour
 
     public TeleportationProvider teleportationProvider;
 
+    public LevelTimer levelTimer;
+
     public int currentPlayerScore = 0;
     public int playerHighScore = 0;
 
@@ -29,6 +31,47 @@ public class LevelComplete : MonoBehaviour
 
     public void playerLevelScore()
     {
-        PlayerPrefs.SetInt("LevelOneHighScore", 1);
+        int playerRemainingTime = levelTimer.getTime();
+
+        backgroundImage.gameObject.SetActive(true);
+
+        if (playerRemainingTime < 60 && playerRemainingTime > 40)
+        {
+            currentPlayerScore = 3;
+            PlayerPrefs.SetInt("LevelOneCurrentScore", currentPlayerScore);
+        }
+        else if (playerRemainingTime < 40 && playerRemainingTime > 20)
+        {
+            currentPlayerScore = 2;
+            Color threeStarColor = threeStar.color;
+            threeStarColor.a = 0.1f;
+            threeStar.color = threeStarColor;
+            PlayerPrefs.SetInt("LevelOneCurrentScore", currentPlayerScore);
+        }
+        else
+        {
+            currentPlayerScore = 1;
+            Color twoStarColor = twoStar.color;
+            twoStarColor.a = 0.1f;
+            threeStar.color = twoStarColor;
+            PlayerPrefs.SetInt("LevelOneCurrentScore", currentPlayerScore);
+        }
+
+        if (currentPlayerScore == 3 && playerHighScore < 3)
+        {
+            playerHighScore = 3;
+            PlayerPrefs.SetInt("LevelOneHighScore", playerHighScore);
+        }
+        if (currentPlayerScore == 2 && playerHighScore < 2)
+        {
+            playerHighScore = 2;
+            PlayerPrefs.SetInt("LevelOneHighScore", playerHighScore);
+        }
+        if (currentPlayerScore == 1)
+        {
+            playerHighScore = 1;
+            PlayerPrefs.SetInt("LevelOneHighScore", playerHighScore);
+        }
     }
+
 }
