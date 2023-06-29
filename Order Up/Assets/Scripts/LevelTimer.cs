@@ -27,7 +27,11 @@ public class LevelTimer : MonoBehaviour
 
     public AudioSource countdownAudioSource;
 
+    public AudioSource secondsCountdown;
+
     public AudioClip timeConfirm;
+
+    public AudioClip secondCount;
 
     public int timeLength;
 
@@ -62,6 +66,10 @@ public class LevelTimer : MonoBehaviour
                     text.text = $"{remainingDuration % 60}";
                 }
                 fill.fillAmount = Mathf.InverseLerp(0, timeLength, remainingDuration);
+                if (remainingDuration != 40 || remainingDuration != 20)
+                {
+                    secondsCountdown.PlayOneShot(secondCount);
+                }
                 if (remainingDuration == 40)
                 {
                     countdownAudioSource.PlayOneShot(timeConfirm);
