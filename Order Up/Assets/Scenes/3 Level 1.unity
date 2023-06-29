@@ -2290,8 +2290,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Level Select
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a78c6b11baf92084d82f539f43030471, type: 2}
+  m_sharedMaterial: {fileID: -1921751752842572228, guid: a78c6b11baf92084d82f539f43030471,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4475,6 +4476,7 @@ MonoBehaviour:
   text: {fileID: 316599172}
   timeLength: 59
   remainingDuration: 0
+  paused: 0
 --- !u!1 &1187159499
 GameObject:
   m_ObjectHideFlags: 0
@@ -4811,14 +4813,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 19669740}
-        m_TargetAssemblyTypeName: SceneTransitionManager, Assembly-CSharp
-        m_MethodName: GoToSceneAsync
-        m_Mode: 3
+      - m_Target: {fileID: 1181497385}
+        m_TargetAssemblyTypeName: LevelTimer, Assembly-CSharp
+        m_MethodName: pauseTimer
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5870,9 +5872,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 0.6862745, g: 0.4117647, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.5137255, g: 0.63529414, b: 0.95686275, a: 1}
+    m_PressedColor: {r: 0.6784314, g: 0.69803923, b: 0.7137255, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -5892,7 +5894,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1457892003}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 19669740}
+        m_TargetAssemblyTypeName: SceneTransitionManager, Assembly-CSharp
+        m_MethodName: GoToSceneAsync
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1457892003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6249,6 +6263,7 @@ GameObject:
   - component: {fileID: 1582555772}
   - component: {fileID: 1582555774}
   - component: {fileID: 1582555775}
+  - component: {fileID: 1582555776}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -6320,6 +6335,26 @@ MonoBehaviour:
   teleportClip: {fileID: 8300000, guid: b342f3b158809fe45b2c44a53f48502c, type: 3}
   timeWindow: 2
   maxPitchIncrements: 8
+--- !u!114 &1582555776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582555771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b458df9e9aba5743856e2b64eb75304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dynamicMoveProvider: {fileID: 741653619818835607}
+  teleportationProvider: {fileID: 741653619818835611}
+  currentPlayerScore: 0
+  playerHighScore: 0
+  backgroundImage: {fileID: 320747521}
+  oneStar: {fileID: 1132569688}
+  twoStar: {fileID: 1456580593}
+  threeStar: {fileID: 81791549}
 --- !u!1 &1629935673
 GameObject:
   m_ObjectHideFlags: 0

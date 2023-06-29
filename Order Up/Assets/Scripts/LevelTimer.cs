@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 public class LevelTimer : MonoBehaviour
 {
     [SerializeField]
@@ -13,6 +14,8 @@ public class LevelTimer : MonoBehaviour
     public int timeLength;
 
     public int remainingDuration;
+
+    public bool paused = false;
 
 
     private void Start()
@@ -30,13 +33,23 @@ public class LevelTimer : MonoBehaviour
     {
         while (remainingDuration >= 0)
         {
-            text.text = $"{remainingDuration % 60}";
-            fill.fillAmount = Mathf.InverseLerp(0, timeLength, remainingDuration);
-            remainingDuration--;
-            yield return new WaitForSeconds(1f);
+            if (paused == false)
+            {
+                text.text = $"{remainingDuration % 59}";
+                fill.fillAmount = Mathf.InverseLerp(0, timeLength, remainingDuration);
+                remainingDuration--;
+                yield return new WaitForSeconds(1f);
+            }
+            yield return null;
         }
         EndOfTimer();
     }
+
+    public void pauseTimer()
+    {
+        paused = true;
+    }
+
 
     public void EndOfTimer()
     {
@@ -46,6 +59,11 @@ public class LevelTimer : MonoBehaviour
     public void startTimer()
     {
         countdown(timeLength);
+    }
+
+    public int getTime()
+    {
+        return remainingDuration;
     }
 
 }
