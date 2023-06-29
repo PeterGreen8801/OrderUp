@@ -13,6 +13,12 @@ public class LevelComplete : MonoBehaviour
 
     public TeleportationProvider teleportationProvider;
 
+    public XRRayInteractor xRRayInteractor;
+
+    public XRDirectInteractor LeftxRDirectInteractor;
+    public XRDirectInteractor RightxRDirectInteractor;
+
+
     public LevelTimer levelTimer;
 
     public int currentPlayerScore = 0;
@@ -23,10 +29,18 @@ public class LevelComplete : MonoBehaviour
     public Image twoStar;
     public Image threeStar;
 
+    void Start()
+    {
+        currentPlayerScore = 0;
+    }
+
     public void freezePlayer()
     {
         dynamicMoveProvider.enabled = false;
         teleportationProvider.enabled = false;
+        xRRayInteractor.enabled = false;
+        RightxRDirectInteractor.enabled = false;
+        LeftxRDirectInteractor.enabled = false;
     }
 
     public void playerLevelScore()
@@ -40,7 +54,7 @@ public class LevelComplete : MonoBehaviour
             currentPlayerScore = 3;
             PlayerPrefs.SetInt("LevelOneCurrentScore", currentPlayerScore);
         }
-        else if (playerRemainingTime < 40 && playerRemainingTime > 20)
+        if (playerRemainingTime < 40 && playerRemainingTime > 20)
         {
             currentPlayerScore = 2;
             Color threeStarColor = threeStar.color;
@@ -48,12 +62,16 @@ public class LevelComplete : MonoBehaviour
             threeStar.color = threeStarColor;
             PlayerPrefs.SetInt("LevelOneCurrentScore", currentPlayerScore);
         }
-        else
+        if (playerRemainingTime < 20)
         {
             currentPlayerScore = 1;
             Color twoStarColor = twoStar.color;
             twoStarColor.a = 0.1f;
-            threeStar.color = twoStarColor;
+            twoStar.color = twoStarColor;
+
+            Color threeStarColor = threeStar.color;
+            threeStarColor.a = 0.1f;
+            threeStar.color = threeStarColor;
             PlayerPrefs.SetInt("LevelOneCurrentScore", currentPlayerScore);
         }
 

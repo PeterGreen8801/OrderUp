@@ -21,6 +21,8 @@ public class LevelCountdown : MonoBehaviour
 
     public TeleportationProvider teleportationProvider;
 
+    public XRRayInteractor xRRayInteractor;
+
     public AudioSource countdownAudioSource;
 
     public AudioSource countdownFinishedAudioSource;
@@ -30,6 +32,7 @@ public class LevelCountdown : MonoBehaviour
         countdown(timeLength);
         dynamicMoveProvider.enabled = false;
         teleportationProvider.enabled = false;
+        xRRayInteractor.enabled = false;
     }
 
 
@@ -59,6 +62,7 @@ public class LevelCountdown : MonoBehaviour
                 countdownFinishedAudioSource.Play();
                 dynamicMoveProvider.enabled = true;
                 teleportationProvider.enabled = true;
+                xRRayInteractor.enabled = true;
                 remainingDuration--;
             }
 
