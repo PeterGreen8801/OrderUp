@@ -9,6 +9,7 @@ TagManager:
   - Water
   - Destroyer
   - Ground
+  - Package
   layers:
   - Default
   - TransparentFX
