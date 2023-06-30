@@ -15,6 +15,6 @@ public class MenuLookAtPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(target);
+        transform.LookAt(target, Vector3.up);
     }
 }
