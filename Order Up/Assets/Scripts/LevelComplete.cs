@@ -75,17 +75,17 @@ public class LevelComplete : MonoBehaviour
             PlayerPrefs.SetInt("LevelOneCurrentScore", currentPlayerScore);
         }
 
-        if (currentPlayerScore == 3 && playerHighScore < 3)
+        if (currentPlayerScore == 3)
         {
             playerHighScore = 3;
             PlayerPrefs.SetInt("LevelOneHighScore", playerHighScore);
         }
-        if (currentPlayerScore == 2 && playerHighScore < 2)
+        if (currentPlayerScore == 2 && PlayerPrefs.GetInt("LevelOneHighScore") < 3)
         {
             playerHighScore = 2;
             PlayerPrefs.SetInt("LevelOneHighScore", playerHighScore);
         }
-        if (currentPlayerScore == 1)
+        if (currentPlayerScore == 1 && PlayerPrefs.GetInt("LevelOneHighScore") < 2)
         {
             playerHighScore = 1;
             PlayerPrefs.SetInt("LevelOneHighScore", playerHighScore);

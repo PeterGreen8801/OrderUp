@@ -72,7 +72,7 @@ public class LevelCountdown : MonoBehaviour
     }
     public void EndOfTimer()
     {
-        Debug.Log("End of timer");
+        //Debug.Log("End of timer");
         text.gameObject.SetActive(false);
         levelTimer.startTimer();
         //dynamicMoveProvider.enabled = true;

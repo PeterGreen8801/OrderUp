@@ -98,7 +98,7 @@ public class LevelTimer : MonoBehaviour
 
     public void EndOfTimer()
     {
-        Debug.Log("End of timer");
+        //Debug.Log("End of timer");
         //Here will freeze player, pop up ui
         dynamicMoveProvider.enabled = false;
         teleportationProvider.enabled = false;
