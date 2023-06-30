@@ -532,7 +532,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1894,7 +1894,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -8299,7 +8299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: 5.14}
+  m_AnchoredPosition: {x: -14.02, y: 1.04}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1011003938
@@ -9705,7 +9705,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1121550508
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13100,11 +13100,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level1Knob: {fileID: 3299885153067776925}
   level2Knob: {fileID: 2027584591}
+  level3Knob: {fileID: 297788988}
   Level1Area: {fileID: 648209218895599092}
   Level2Area: {fileID: 1283184888}
+  Level3Area: {fileID: 1913895146}
   LevelOneScore: {fileID: 1786386902}
   LevelOneTwoStar: {fileID: 916311346919879070}
   LevelOneThreeStar: {fileID: 916311347759684690}
+  LevelTwoScore: {fileID: 1121550507}
+  LevelTwoTwoStar: {fileID: 161275380}
+  LevelTwoThreeStar: {fileID: 2053377779}
 --- !u!1 &1577728377
 GameObject:
   m_ObjectHideFlags: 0
@@ -15105,7 +15110,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

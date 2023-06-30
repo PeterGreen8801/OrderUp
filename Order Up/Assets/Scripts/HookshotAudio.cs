@@ -18,7 +18,7 @@ public class HookshotAudio : MonoBehaviour
 
     }
 
-    public void PlayTeleportSound()
+    public void PlayHookshotSound()
     {
         float currentTime = Time.time;
 
