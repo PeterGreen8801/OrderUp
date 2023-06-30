@@ -92,4 +92,53 @@ public class LevelComplete : MonoBehaviour
         }
     }
 
+    public void playerLevel2Score()
+    {
+        int playerRemainingTime = levelTimer.getTime();
+
+        backgroundImage.gameObject.SetActive(true);
+
+        if (playerRemainingTime < 60 && playerRemainingTime > 40)
+        {
+            currentPlayerScore = 3;
+            PlayerPrefs.SetInt("LevelTwoCurrentScore", currentPlayerScore);
+        }
+        if (playerRemainingTime < 40 && playerRemainingTime > 20)
+        {
+            currentPlayerScore = 2;
+            Color threeStarColor = threeStar.color;
+            threeStarColor.a = 0.1f;
+            threeStar.color = threeStarColor;
+            PlayerPrefs.SetInt("LevelTwoCurrentScore", currentPlayerScore);
+        }
+        if (playerRemainingTime < 20)
+        {
+            currentPlayerScore = 1;
+            Color twoStarColor = twoStar.color;
+            twoStarColor.a = 0.1f;
+            twoStar.color = twoStarColor;
+
+            Color threeStarColor = threeStar.color;
+            threeStarColor.a = 0.1f;
+            threeStar.color = threeStarColor;
+            PlayerPrefs.SetInt("LevelTwoCurrentScore", currentPlayerScore);
+        }
+
+        if (currentPlayerScore == 3)
+        {
+            playerHighScore = 3;
+            PlayerPrefs.SetInt("LevelTwoHighScore", playerHighScore);
+        }
+        if (currentPlayerScore == 2 && PlayerPrefs.GetInt("LevelTwoHighScore") < 3)
+        {
+            playerHighScore = 2;
+            PlayerPrefs.SetInt("LevelTwoHighScore", playerHighScore);
+        }
+        if (currentPlayerScore == 1 && PlayerPrefs.GetInt("LevelTwoHighScore") < 2)
+        {
+            playerHighScore = 1;
+            PlayerPrefs.SetInt("LevelTwoHighScore", playerHighScore);
+        }
+    }
+
 }

@@ -12,6 +12,8 @@ public class NPCDialog : MonoBehaviour
 
     public Image npc2dialogfirst;
     public Image npc2dialog;
+    public Image npc3dialog;
+    public Image npc4dialog;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("NPC1"))
@@ -25,6 +27,14 @@ public class NPCDialog : MonoBehaviour
         if (other.CompareTag("NPC2") && PlayerPrefs.GetInt("LevelOneHighScore") > 0)
         {
             npc2dialog.gameObject.SetActive(true);
+        }
+        if (other.CompareTag("NPC3"))
+        {
+            npc3dialog.gameObject.SetActive(true);
+        }
+        if (other.CompareTag("NPC4"))
+        {
+            npc4dialog.gameObject.SetActive(true);
         }
         if (other.CompareTag("NPC7"))
         {
@@ -45,6 +55,14 @@ public class NPCDialog : MonoBehaviour
         if (other.CompareTag("NPC2") && PlayerPrefs.GetInt("LevelOneHighScore") > 0)
         {
             npc2dialog.gameObject.SetActive(false);
+        }
+        if (other.CompareTag("NPC3"))
+        {
+            npc3dialog.gameObject.SetActive(false);
+        }
+        if (other.CompareTag("NPC4"))
+        {
+            npc4dialog.gameObject.SetActive(false);
         }
         if (other.CompareTag("NPC7"))
         {
