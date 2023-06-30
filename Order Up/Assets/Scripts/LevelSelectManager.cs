@@ -33,7 +33,7 @@ public class LevelSelectManager : MonoBehaviour
     public Image LevelThreeTwoStar;
     public Image LevelThreeThreeStar;
 
-    public GameObject levelFourScore;
+    public GameObject LevelFourScore;
     public Image LevelFourTwoStar;
     public Image LevelFourThreeStar;
 
@@ -275,7 +275,7 @@ public class LevelSelectManager : MonoBehaviour
             level5Knob.enabled = true;
             level5Area.SetActive(true);
 
-            LevelThreeScore.gameObject.SetActive(true);
+            LevelFourScore.gameObject.SetActive(true);
 
             if (PlayerPrefs.GetInt("LevelFourHighScore") == 2)
             {
