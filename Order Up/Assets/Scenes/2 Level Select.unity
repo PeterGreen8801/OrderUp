@@ -7126,7 +7126,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &889323989
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13101,15 +13101,20 @@ MonoBehaviour:
   level1Knob: {fileID: 3299885153067776925}
   level2Knob: {fileID: 2027584591}
   level3Knob: {fileID: 297788988}
+  level4Knob: {fileID: 43899552}
   Level1Area: {fileID: 648209218895599092}
   Level2Area: {fileID: 1283184888}
   Level3Area: {fileID: 1913895146}
+  Level4Area: {fileID: 1705552796}
   LevelOneScore: {fileID: 1786386902}
   LevelOneTwoStar: {fileID: 916311346919879070}
   LevelOneThreeStar: {fileID: 916311347759684690}
   LevelTwoScore: {fileID: 1121550507}
   LevelTwoTwoStar: {fileID: 161275380}
   LevelTwoThreeStar: {fileID: 2053377779}
+  LevelThreeScore: {fileID: 889323988}
+  LevelThreeTwoStar: {fileID: 157690355}
+  LevelThreeThreeStar: {fileID: 390863236}
 --- !u!1 &1577728377
 GameObject:
   m_ObjectHideFlags: 0

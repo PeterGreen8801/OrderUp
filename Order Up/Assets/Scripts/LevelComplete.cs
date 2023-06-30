@@ -141,4 +141,102 @@ public class LevelComplete : MonoBehaviour
         }
     }
 
+    public void playerLevel3Score()
+    {
+        int playerRemainingTime = levelTimer.getTime();
+
+        backgroundImage.gameObject.SetActive(true);
+
+        if (playerRemainingTime < 60 && playerRemainingTime > 40)
+        {
+            currentPlayerScore = 3;
+            PlayerPrefs.SetInt("LevelThreeCurrentScore", currentPlayerScore);
+        }
+        if (playerRemainingTime < 40 && playerRemainingTime > 20)
+        {
+            currentPlayerScore = 2;
+            Color threeStarColor = threeStar.color;
+            threeStarColor.a = 0.1f;
+            threeStar.color = threeStarColor;
+            PlayerPrefs.SetInt("LevelThreeCurrentScore", currentPlayerScore);
+        }
+        if (playerRemainingTime < 20)
+        {
+            currentPlayerScore = 1;
+            Color twoStarColor = twoStar.color;
+            twoStarColor.a = 0.1f;
+            twoStar.color = twoStarColor;
+
+            Color threeStarColor = threeStar.color;
+            threeStarColor.a = 0.1f;
+            threeStar.color = threeStarColor;
+            PlayerPrefs.SetInt("LevelThreeCurrentScore", currentPlayerScore);
+        }
+
+        if (currentPlayerScore == 3)
+        {
+            playerHighScore = 3;
+            PlayerPrefs.SetInt("LevelThreeHighScore", playerHighScore);
+        }
+        if (currentPlayerScore == 2 && PlayerPrefs.GetInt("LevelThreeHighScore") < 3)
+        {
+            playerHighScore = 2;
+            PlayerPrefs.SetInt("LevelThreeHighScore", playerHighScore);
+        }
+        if (currentPlayerScore == 1 && PlayerPrefs.GetInt("LevelThreeHighScore") < 2)
+        {
+            playerHighScore = 1;
+            PlayerPrefs.SetInt("LevelThreeHighScore", playerHighScore);
+        }
+    }
+
+    public void playerLevel4Score()
+    {
+        int playerRemainingTime = levelTimer.getTime();
+
+        backgroundImage.gameObject.SetActive(true);
+
+        if (playerRemainingTime < 60 && playerRemainingTime > 40)
+        {
+            currentPlayerScore = 3;
+            PlayerPrefs.SetInt("LevelFourCurrentScore", currentPlayerScore);
+        }
+        if (playerRemainingTime < 40 && playerRemainingTime > 20)
+        {
+            currentPlayerScore = 2;
+            Color threeStarColor = threeStar.color;
+            threeStarColor.a = 0.1f;
+            threeStar.color = threeStarColor;
+            PlayerPrefs.SetInt("LevelFourCurrentScore", currentPlayerScore);
+        }
+        if (playerRemainingTime < 20)
+        {
+            currentPlayerScore = 1;
+            Color twoStarColor = twoStar.color;
+            twoStarColor.a = 0.1f;
+            twoStar.color = twoStarColor;
+
+            Color threeStarColor = threeStar.color;
+            threeStarColor.a = 0.1f;
+            threeStar.color = threeStarColor;
+            PlayerPrefs.SetInt("LevelFourCurrentScore", currentPlayerScore);
+        }
+
+        if (currentPlayerScore == 3)
+        {
+            playerHighScore = 3;
+            PlayerPrefs.SetInt("LevelFourHighScore", playerHighScore);
+        }
+        if (currentPlayerScore == 2 && PlayerPrefs.GetInt("LevelFourHighScore") < 3)
+        {
+            playerHighScore = 2;
+            PlayerPrefs.SetInt("LevelFourHighScore", playerHighScore);
+        }
+        if (currentPlayerScore == 1 && PlayerPrefs.GetInt("LevelFourHighScore") < 2)
+        {
+            playerHighScore = 1;
+            PlayerPrefs.SetInt("LevelFourHighScore", playerHighScore);
+        }
+    }
+
 }
