@@ -16547,6 +16547,24 @@ Transform:
   m_Father: {fileID: 1697326070}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &656491698 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6584945250820062198, guid: 002e7b45c26bdf448b83f752b8aa6588,
+    type: 3}
+  m_PrefabInstance: {fileID: 6584945251417378818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &656491702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656491698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a37935042eb04b34f81a21df5806810b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &668068852
 GameObject:
   m_ObjectHideFlags: 0
@@ -37451,6 +37469,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 258331798983892086, guid: b9a7d9fb772a1ed4f97e7190775077d4,
+        type: 3}
+      propertyPath: m_TagString
+      value: RightDirectInteractor
+      objectReference: {fileID: 0}
     - target: {fileID: 3722016991618474160, guid: b9a7d9fb772a1ed4f97e7190775077d4,
         type: 3}
       propertyPath: startPoint
@@ -37515,6 +37538,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194374513367723395, guid: b9a7d9fb772a1ed4f97e7190775077d4,
+        type: 3}
+      propertyPath: m_TagString
+      value: LeftDirectInteractor
       objectReference: {fileID: 0}
     - target: {fileID: 9207997418016487632, guid: b9a7d9fb772a1ed4f97e7190775077d4,
         type: 3}
