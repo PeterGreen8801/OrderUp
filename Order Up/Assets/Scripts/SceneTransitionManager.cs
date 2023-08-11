@@ -8,6 +8,9 @@ public class SceneTransitionManager : MonoBehaviour
     public FadeScreen fadeScreen;
     public static SceneTransitionManager singleton;
 
+    //Newly added
+    private bool isTransitioning = false;
+
     private void Awake()
     {
         if (singleton && singleton != this)
@@ -32,6 +35,14 @@ public class SceneTransitionManager : MonoBehaviour
 
     public void GoToSceneAsync(int sceneIndex)
     {
+        //Newly added 
+        // Check if a transition is already in progress
+        if (isTransitioning)
+            return;
+
+        // Set the flag to indicate a transition is happening
+        isTransitioning = true;
+        
         StartCoroutine(GoToSceneAsyncRoutine(sceneIndex));
     }
 
@@ -50,5 +61,9 @@ public class SceneTransitionManager : MonoBehaviour
         }
 
         operation.allowSceneActivation = true;
+
+        //Newly added
+        // Reset the flag after the transition is complete
+        isTransitioning = false;
     }
 }
