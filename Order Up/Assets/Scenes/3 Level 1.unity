@@ -6611,6 +6611,12 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1 &480305481 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 258331798983892086, guid: b9a7d9fb772a1ed4f97e7190775077d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 9207997419569614098}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519918712
 GameObject:
   m_ObjectHideFlags: 0
@@ -28339,7 +28345,19 @@ MonoBehaviour:
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9207997419569614099}
+        m_TargetAssemblyTypeName: LeftOrRightHapticHandProvider, Assembly-CSharp
+        m_MethodName: LeftOrRightStandardHaptics
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
       m_Calls: []
@@ -36493,7 +36511,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 9207997419569614098}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 480305481}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4253f32900bcc4d499d675566142ded0, type: 3}
@@ -36971,11 +36989,16 @@ PrefabInstance:
     - target: {fileID: 6584945250820062196, guid: 002e7b45c26bdf448b83f752b8aa6588,
         type: 3}
       propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6584945250820062196, guid: 002e7b45c26bdf448b83f752b8aa6588,
         type: 3}
       propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584945250820062196, guid: 002e7b45c26bdf448b83f752b8aa6588,
+        type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6584945250820062196, guid: 002e7b45c26bdf448b83f752b8aa6588,
@@ -36985,18 +37008,28 @@ PrefabInstance:
       objectReference: {fileID: 9207997419569614099}
     - target: {fileID: 6584945250820062196, guid: 002e7b45c26bdf448b83f752b8aa6588,
         type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 480305481}
+    - target: {fileID: 6584945250820062196, guid: 002e7b45c26bdf448b83f752b8aa6588,
+        type: 3}
       propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6584945250820062196, guid: 002e7b45c26bdf448b83f752b8aa6588,
         type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584945250820062196, guid: 002e7b45c26bdf448b83f752b8aa6588,
+        type: 3}
       propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BasictHapticImpulse
+      value: LeftOrRightStandardHaptics
       objectReference: {fileID: 0}
     - target: {fileID: 6584945250820062196, guid: 002e7b45c26bdf448b83f752b8aa6588,
         type: 3}
       propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: HapticImpulse, Assembly-CSharp
+      value: LeftOrRightHapticHandProvider, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6584945250820062196, guid: 002e7b45c26bdf448b83f752b8aa6588,
         type: 3}
@@ -37459,7 +37492,7 @@ PrefabInstance:
     - target: {fileID: 159020557231492415, guid: b9a7d9fb772a1ed4f97e7190775077d4,
         type: 3}
       propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 159020557231492415, guid: b9a7d9fb772a1ed4f97e7190775077d4,
         type: 3}
@@ -37470,7 +37503,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 9207997419569614100}
+      objectReference: {fileID: 0}
     - target: {fileID: 159020557231492415, guid: b9a7d9fb772a1ed4f97e7190775077d4,
         type: 3}
       propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -37569,7 +37602,7 @@ PrefabInstance:
     - target: {fileID: 8077618291240598730, guid: b9a7d9fb772a1ed4f97e7190775077d4,
         type: 3}
       propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8077618291240598730, guid: b9a7d9fb772a1ed4f97e7190775077d4,
         type: 3}
@@ -37580,7 +37613,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 9207997419569614099}
+      objectReference: {fileID: 0}
     - target: {fileID: 8077618291240598730, guid: b9a7d9fb772a1ed4f97e7190775077d4,
         type: 3}
       propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -37654,7 +37687,7 @@ PrefabInstance:
     - target: {fileID: 9207997418550138111, guid: b9a7d9fb772a1ed4f97e7190775077d4,
         type: 3}
       propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BasictHapticImpulse
+      value: LeftOrRightStandardHaptics
       objectReference: {fileID: 0}
     - target: {fileID: 9207997418550138111, guid: b9a7d9fb772a1ed4f97e7190775077d4,
         type: 3}
@@ -37669,7 +37702,7 @@ PrefabInstance:
     - target: {fileID: 9207997418550138111, guid: b9a7d9fb772a1ed4f97e7190775077d4,
         type: 3}
       propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: HapticImpulse, Assembly-CSharp
+      value: LeftOrRightHapticHandProvider, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9207997418550138111, guid: b9a7d9fb772a1ed4f97e7190775077d4,
         type: 3}
@@ -37716,29 +37749,19 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2780110676779798364, guid: b9a7d9fb772a1ed4f97e7190775077d4, type: 3}
+    - {fileID: 2132103866636404546, guid: b9a7d9fb772a1ed4f97e7190775077d4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b9a7d9fb772a1ed4f97e7190775077d4, type: 3}
 --- !u!114 &9207997419569614099 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2132103866636404546, guid: b9a7d9fb772a1ed4f97e7190775077d4,
+  m_CorrespondingSourceObject: {fileID: 529400129829662636, guid: b9a7d9fb772a1ed4f97e7190775077d4,
     type: 3}
   m_PrefabInstance: {fileID: 9207997419569614098}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7430966cea983e64f9ac80fea37a6891, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &9207997419569614100 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2780110676779798364, guid: b9a7d9fb772a1ed4f97e7190775077d4,
-    type: 3}
-  m_PrefabInstance: {fileID: 9207997419569614098}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7430966cea983e64f9ac80fea37a6891, type: 3}
+  m_Script: {fileID: 11500000, guid: a37935042eb04b34f81a21df5806810b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
