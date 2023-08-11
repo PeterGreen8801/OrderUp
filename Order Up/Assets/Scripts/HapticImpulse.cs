@@ -2,14 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using Unity.XR;
 
 public class HapticImpulse : MonoBehaviour
 {
+
+    //Deprecated in a way, traded for LeftOrRightHapticHandProvider script
+
     [SerializeField]
     XRBaseControllerInteractor interactor;
 
+    CheckGrabStatus checkGrabStatus;
+
     public float hapticIntensity = 0.5f;
     public float hapticDuration = 0.25f;
+
 
     // Start a haptic impulse with the specified intensity and default duration
     public void HapticImpulseIntensity(float intensity)
@@ -60,4 +67,21 @@ public class HapticImpulse : MonoBehaviour
     {
         hapticDuration = modifiedDuration;
     }
+
+    public void leftHandImpulse()
+    {
+        if (checkGrabStatus.checkLeftGrab() == true)
+        {
+            BasictHapticImpulse();
+        }
+    }
+
+    public void rightHandImpulse()
+    {
+        if (checkGrabStatus.checkRightGrab() == true)
+        {
+            BasictHapticImpulse();
+        }
+    }
+
 }

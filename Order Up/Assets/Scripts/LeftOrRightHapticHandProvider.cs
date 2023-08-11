@@ -6,30 +6,36 @@ using Unity.XR;
 
 public class LeftOrRightHapticHandProvider : MonoBehaviour
 {
-    //public XRBaseControllerInteractor leftHandInteractor;
-    //public XRBaseControllerInteractor rightHandInteractor;
+    public XRDirectInteractor leftDirectInteractor;
+    public XRDirectInteractor rightDirectInteractor;
 
-    //public GameObject leftHandInteractor;
-    //public GameObject rightHandInteractor;
-
-    //public XRRayInteractor ray;
+    public float hapticIntensity = 0.5f;
+    public float hapticDuration = 0.25f;
 
 
-    // Start is called before the first frame update
-    void Start()
+    // Start a haptic impulse with the default intensity and duration
+    public void LeftOrRightStandardHaptics()
     {
+        if (leftDirectInteractor.hasSelection)
+        {
+            leftDirectInteractor.SendHapticImpulse(hapticIntensity, hapticDuration);
 
+        }
+        if (rightDirectInteractor.hasSelection)
+        {
+            rightDirectInteractor.SendHapticImpulse(hapticIntensity, hapticDuration);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    // Change the haptic duration to the provided value
+    public void ChangeHapticDuration(float modifiedDuration)
     {
-
+        hapticDuration = modifiedDuration;
     }
 
-    private void OnTriggerEnter(Collider other)
+    // Change the haptic intensity to the provided value
+    public void ChangeHapticIntensity(float modifiedIntensity)
     {
-
+        hapticIntensity = modifiedIntensity;
     }
-
 }

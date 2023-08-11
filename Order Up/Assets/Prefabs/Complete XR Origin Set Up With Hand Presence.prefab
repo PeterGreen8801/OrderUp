@@ -608,7 +608,6 @@ GameObject:
   - component: {fileID: 3225927350145454725}
   - component: {fileID: 8077618291240598730}
   - component: {fileID: 3258843844681403135}
-  - component: {fileID: 2132103866636404546}
   m_Layer: 0
   m_Name: Direct Interactor
   m_TagString: Untagged
@@ -729,21 +728,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.08
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2132103866636404546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258331798983892086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7430966cea983e64f9ac80fea37a6891, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactor: {fileID: 8077618291240598730}
-  hapticIntensity: 0.5
-  hapticDuration: 0.25
 --- !u!1 &537966446805241012
 GameObject:
   m_ObjectHideFlags: 0
@@ -2518,6 +2502,7 @@ GameObject:
   - component: {fileID: 3722016991618474163}
   - component: {fileID: 3722016991618474160}
   - component: {fileID: 3722016991618474161}
+  - component: {fileID: 529400129829662636}
   m_Layer: 30
   m_Name: XR Origin
   m_TagString: Untagged
@@ -2794,6 +2779,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.2043777, z: 1}
   m_Center: {x: -0, y: 1.0936465, z: 0}
+--- !u!114 &529400129829662636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3759323428590412083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a37935042eb04b34f81a21df5806810b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftDirectInteractor: {fileID: 159020557231492415}
+  rightDirectInteractor: {fileID: 8077618291240598730}
+  hapticIntensity: 0.5
+  hapticDuration: 0.25
 --- !u!1 &4295096470999154420
 GameObject:
   m_ObjectHideFlags: 0
@@ -4003,7 +4004,6 @@ GameObject:
   - component: {fileID: 6839077249802593136}
   - component: {fileID: 159020557231492415}
   - component: {fileID: 6851169543862582026}
-  - component: {fileID: 2780110676779798364}
   m_Layer: 0
   m_Name: Direct Interactor
   m_TagString: Untagged
@@ -4124,21 +4124,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.08
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2780110676779798364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8194374513367723395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7430966cea983e64f9ac80fea37a6891, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactor: {fileID: 159020557231492415}
-  hapticIntensity: 0.5
-  hapticDuration: 0.25
 --- !u!1 &8467755571861812833
 GameObject:
   m_ObjectHideFlags: 0
