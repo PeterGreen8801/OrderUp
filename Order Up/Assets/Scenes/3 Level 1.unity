@@ -36968,6 +36968,41 @@ PrefabInstance:
       propertyPath: m_StartingSelectedInteractable
       value: 
       objectReference: {fileID: 981401857}
+    - target: {fileID: 6584945250820062196, guid: 002e7b45c26bdf448b83f752b8aa6588,
+        type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584945250820062196, guid: 002e7b45c26bdf448b83f752b8aa6588,
+        type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584945250820062196, guid: 002e7b45c26bdf448b83f752b8aa6588,
+        type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9207997419569614099}
+    - target: {fileID: 6584945250820062196, guid: 002e7b45c26bdf448b83f752b8aa6588,
+        type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584945250820062196, guid: 002e7b45c26bdf448b83f752b8aa6588,
+        type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BasictHapticImpulse
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584945250820062196, guid: 002e7b45c26bdf448b83f752b8aa6588,
+        type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HapticImpulse, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584945250820062196, guid: 002e7b45c26bdf448b83f752b8aa6588,
+        type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 002e7b45c26bdf448b83f752b8aa6588, type: 3}
 --- !u!20 &6644439967690536315 stripped
@@ -37488,14 +37523,29 @@ PrefabInstance:
       objectReference: {fileID: 19669740}
     - target: {fileID: 9207997418550138111, guid: b9a7d9fb772a1ed4f97e7190775077d4,
         type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9207997418550138111, guid: b9a7d9fb772a1ed4f97e7190775077d4,
+        type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9207997418550138111, guid: b9a7d9fb772a1ed4f97e7190775077d4,
+        type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9207997418550138111, guid: b9a7d9fb772a1ed4f97e7190775077d4,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 9207997418550138111, guid: b9a7d9fb772a1ed4f97e7190775077d4,
+        type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9207997419569614099}
     - target: {fileID: 9207997418550138111, guid: b9a7d9fb772a1ed4f97e7190775077d4,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -37508,6 +37558,16 @@ PrefabInstance:
       objectReference: {fileID: 670879093}
     - target: {fileID: 9207997418550138111, guid: b9a7d9fb772a1ed4f97e7190775077d4,
         type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9207997418550138111, guid: b9a7d9fb772a1ed4f97e7190775077d4,
+        type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BasictHapticImpulse
+      objectReference: {fileID: 0}
+    - target: {fileID: 9207997418550138111, guid: b9a7d9fb772a1ed4f97e7190775077d4,
+        type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -37518,8 +37578,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9207997418550138111, guid: b9a7d9fb772a1ed4f97e7190775077d4,
         type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HapticImpulse, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9207997418550138111, guid: b9a7d9fb772a1ed4f97e7190775077d4,
+        type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9207997418550138111, guid: b9a7d9fb772a1ed4f97e7190775077d4,
+        type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 9207997418550138111, guid: b9a7d9fb772a1ed4f97e7190775077d4,
         type: 3}
@@ -37558,3 +37628,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9a7d9fb772a1ed4f97e7190775077d4, type: 3}
+--- !u!114 &9207997419569614099 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2132103866636404546, guid: b9a7d9fb772a1ed4f97e7190775077d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 9207997419569614098}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7430966cea983e64f9ac80fea37a6891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
