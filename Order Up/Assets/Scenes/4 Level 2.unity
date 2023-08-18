@@ -37726,7 +37726,8 @@ PrefabInstance:
     - target: {fileID: 1231955086209480810, guid: bd98d539cb81b824184d9a6f96786c51,
         type: 3}
       propertyPath: m_text
-      value: 'Grab the blue symbols to float on air.
+      value: 'Raise your hand towards the blue symbols and press the grip button
+        to float on air.
 
         Be careful not to fall!'
       objectReference: {fileID: 0}
@@ -37897,7 +37898,7 @@ PrefabInstance:
     - target: {fileID: 5661958616476815124, guid: 375b23b87801de6488e810f00df01807,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.625
+      value: -0.696
       objectReference: {fileID: 0}
     - target: {fileID: 5661958616476815127, guid: 375b23b87801de6488e810f00df01807,
         type: 3}
@@ -38382,7 +38383,7 @@ PrefabInstance:
     - target: {fileID: 5661958617996654481, guid: 375b23b87801de6488e810f00df01807,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.627
+      value: -0.6979999
       objectReference: {fileID: 0}
     - target: {fileID: 5661958617996654484, guid: 375b23b87801de6488e810f00df01807,
         type: 3}
