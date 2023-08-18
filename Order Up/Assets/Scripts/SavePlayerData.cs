@@ -6,7 +6,6 @@ public class SavePlayerData : MonoBehaviour
 {
     public int newestLevelUnlocked = 1;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +20,24 @@ public class SavePlayerData : MonoBehaviour
     public void updateLevelUnlocked(int levelToUnlock)
     {
         PlayerPrefs.SetInt("CurrentLevelUnlocked", levelToUnlock);
+    }
+
+    public void updateLevel(int levelToUnlock)
+    {
+        if (PlayerPrefs.GetInt("MaxLevelUnlocked") <= levelToUnlock)
+        {
+            PlayerPrefs.SetInt("CurrentLevelUnlocked", levelToUnlock);
+            PlayerPrefs.SetInt("MaxLevelUnlocked", levelToUnlock);
+        }
+    }
+
+    public void updateFirstLevel(int levelToUnlock)
+    {
+        if (!PlayerPrefs.HasKey("MaxLevelUnlocked"))
+        {
+            PlayerPrefs.SetInt("CurrentLevelUnlocked", levelToUnlock);
+            PlayerPrefs.SetInt("MaxLevelUnlocked", levelToUnlock);
+        }
     }
 
     //Takes currentLevel from editor and makes sure that newestLevelUnlocked is only updated if that is the player's currentNewestLevel

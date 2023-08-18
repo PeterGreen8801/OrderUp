@@ -28755,7 +28755,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1582555774}
         m_TargetAssemblyTypeName: SavePlayerData, Assembly-CSharp
-        m_MethodName: updateLevelUnlocked
+        m_MethodName: updateLevel
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

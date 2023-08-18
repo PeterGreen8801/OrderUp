@@ -49,11 +49,16 @@ public class LevelSelectManager : MonoBehaviour
         updateUnlockedLevels();
     }
 
+
+
     public void updateUnlockedLevels()
     {
         //Player Unlocked Level 2, Updates Highscore for Level 1
         if (PlayerPrefs.GetInt("CurrentLevelUnlocked") == 2)
         {
+            //sets the max level unlocked to level 2
+            //PlayerPrefs.SetInt("MaxLevelUnlocked", 2);
+
             level2Knob.enabled = true;
             Level2Area.SetActive(true);
 
@@ -108,6 +113,9 @@ public class LevelSelectManager : MonoBehaviour
             //Unlocks level 3, updates highscore for level 2
             level3Knob.enabled = true;
             Level3Area.SetActive(true);
+
+            //sets the max level unlocked to 3
+            //PlayerPrefs.SetInt("MaxLevelUnlocked", 3);
 
             LevelTwoScore.gameObject.SetActive(true);
 
@@ -185,6 +193,9 @@ public class LevelSelectManager : MonoBehaviour
             Level4Area.SetActive(true);
 
             LevelThreeScore.gameObject.SetActive(true);
+
+            //sets the max level unlocked to 4
+            //PlayerPrefs.SetInt("MaxLevelUnlocked", 4);
 
             if (PlayerPrefs.GetInt("LevelThreeHighScore") == 2)
             {
@@ -379,6 +390,9 @@ public class LevelSelectManager : MonoBehaviour
             level5Area.SetActive(true);
 
             LevelFourScore.gameObject.SetActive(true);
+
+            //sets the max level unlocked to 5
+            //PlayerPrefs.SetInt("MaxLevelUnlocked", 5);
 
             if (PlayerPrefs.GetInt("LevelFourHighScore") == 2)
             {
